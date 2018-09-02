@@ -16,7 +16,7 @@ client.on('message', async (message) => {
                 message.channel.send(`Hi ${args.slice(1).join(' ')}, I'm dad`);
         }
         owos = ['owo', 'ovo', 'uwu', 'uvu', 'unu', 'ono', 'umu', 'ene', 'nun'];
-        if(owos.includes(args[0].toLowerCase()) && !client.disabledMembers.has(message.author.id)) message.channel.send('<:object:451062455762681866>');
+        if(owos.includes(args[0].toLowerCase()) && !client.disabledMembers.has(message.author.id)) message.channel.send(':object:');
         if(message.isMemberMentioned(client.user)){
                 client.user.setPresence({ status: 'online', game: { name: `with my ${client.users.array().length} kids` } });
                 if(message.content.indexOf('stop') !== -1) client.disabledMembers.set(message.author.id, message.guild.id)
