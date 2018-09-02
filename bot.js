@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.disabledMembers = new Map();
-client.login('Ms-SafeToken-abcdefghijklmnopqrstuvwxyz1234567890');
+const token = require('./token.json');
+client.login(token.token);
 
 client.on('ready', async () => {
         console.log('I am ready!');
